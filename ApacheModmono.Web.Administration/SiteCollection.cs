@@ -6,25 +6,28 @@
 
 	public class SiteCollection : IEnumerable<Site>
 	{
+		internal Dictionary<string, Site> items = new Dictionary<string, Site>();
+
 		public SiteCollection()
 		{
 		}
+
 		public Site this[string name]
 		{
 			get
 			{
-				throw new NotImplementedException();
+				return items[name];
 			}
 		}
 
 		IEnumerator IEnumerable.GetEnumerator()
 		{
-			throw new NotImplementedException();
+			return items.Values.GetEnumerator();
 		}
 
 		IEnumerator<Site> IEnumerable<Site>.GetEnumerator()
 		{
-			throw new NotImplementedException();
+			return items.Values.GetEnumerator();
 		}
 	}
 }

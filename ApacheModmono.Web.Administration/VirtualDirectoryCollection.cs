@@ -6,25 +6,28 @@
 
 	public class VirtualDirectoryCollection : IEnumerable<VirtualDirectory>
 	{
+		internal Dictionary<string, VirtualDirectory> items = new Dictionary<string, VirtualDirectory>();
+
 		public VirtualDirectoryCollection()
 		{
 		}
+
 		public VirtualDirectory this[string name]
 		{
 			get
 			{
-				throw new NotImplementedException();
+				return items[name];
 			}
 		}
 
 		IEnumerator IEnumerable.GetEnumerator()
 		{
-			throw new NotImplementedException();
+			return items.Values.GetEnumerator();
 		}
 
 		IEnumerator<VirtualDirectory> IEnumerable<VirtualDirectory>.GetEnumerator()
 		{
-			throw new NotImplementedException();
+			return items.Values.GetEnumerator();
 		}
 	}
 }

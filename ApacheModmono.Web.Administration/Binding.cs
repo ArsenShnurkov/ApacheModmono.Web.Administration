@@ -6,39 +6,13 @@ namespace ApacheModmono.Web.Administration
 		public Binding()
 		{
 		}
-		public string Host
-		{
-			get
-			{
-				throw new NotImplementedException();
-			}
-			set
-			{
-				throw new NotImplementedException();
-			}
-		}
-		public string Protocol
-		{
-			get
-			{
-				throw new NotImplementedException();
-			}
-			set
-			{
-				throw new NotImplementedException();
-			}
-		}
-		public string BindingInformation
-		{
-			get
-			{
-				throw new NotImplementedException();
-			}
-			set
-			{
-				throw new NotImplementedException();
-			}
-		}
+
+		public string Host { get; set; }
+
+		public string Protocol { get; set; }
+
+		public string BindingInformation { get; set; }
+
 		public byte[] CertificateHash
 		{
 			get
@@ -50,17 +24,8 @@ namespace ApacheModmono.Web.Administration
 				throw new NotImplementedException();
 			}
 		}
-		public string CertificateStoreName
-		{
-			get
-			{
-				throw new NotImplementedException();
-			}
-			set
-			{
-				throw new NotImplementedException();
-			}
-		}
+
+		public string CertificateStoreName { get; set; }
 	}
 }
 

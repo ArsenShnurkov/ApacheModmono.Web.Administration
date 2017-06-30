@@ -3,14 +3,17 @@ namespace ApacheModmono.Web.Administration
 {
 	public class VirtualDirectory
 	{
+		internal string physicalPath;
+
 		public VirtualDirectory()
 		{
 		}
+
 		public string PhysicalPath
 		{
 			get
 			{
-				throw new NotImplementedException();
+				return physicalPath;
 			}
 		}
 	}

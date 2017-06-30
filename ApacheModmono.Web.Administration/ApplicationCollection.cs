@@ -6,25 +6,28 @@
 
 	public class ApplicationCollection : IEnumerable<Application>
 	{
+		internal Dictionary<string, Application> items = new Dictionary<string, Application>();
+
 		public ApplicationCollection()
 		{
 		}
+
 		public Application this[string name]
 		{
 			get
 			{
-				throw new NotImplementedException();
+				return items[name];
 			}
 		}
 
 		IEnumerator IEnumerable.GetEnumerator()
 		{
-			throw new NotImplementedException();
+			return items.Values.GetEnumerator();
 		}
 
 		IEnumerator<Application> IEnumerable<Application>.GetEnumerator()
 		{
-			throw new NotImplementedException();
+			return items.Values.GetEnumerator();
 		}
 	}
 }

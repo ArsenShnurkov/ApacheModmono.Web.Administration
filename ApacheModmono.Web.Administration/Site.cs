@@ -3,32 +3,28 @@ namespace ApacheModmono.Web.Administration
 {
 	public class Site
 	{
+		BindingCollection bindings = new BindingCollection();
+		ApplicationCollection applications = new ApplicationCollection();
+
 		public Site()
 		{
 		}
-		public string Name
-		{
-			get
-			{
-				throw new NotImplementedException();
-			}
-			set
-			{
-				throw new NotImplementedException();
-			}
-		}
+
+		public string Name { get; set; }
+
 		public BindingCollection Bindings
 		{
 			get
 			{
-				throw new NotImplementedException();
+				return bindings;
 			}
 		}
+
 		public ApplicationCollection Applications
 		{
 			get
 			{
-				throw new NotImplementedException();
+				return applications;
 			}
 		}
 	}
